@@ -1,2 +1,2 @@
 # PinguDingu
-pingu dingu kingu lingu wingu
+pingu yingu tingu tingu yingu aingu hingu? wingu lingu mingu tingu singu. yingu aingu lingu bingu!
