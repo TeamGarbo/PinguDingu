@@ -1,0 +1,29 @@
+Penguin game
+	- Single penguin
+	- Igloo on a patch of ice
+	- 3D
+	- 3rd Person
+	- Collecting items to build up home.
+	- Swimming in water. Water surrounds home.
+	- Mini islands.
+	- Whales/orcas/sharks in water, chase if you get too close.
+	- MECHANICS:
+		- Picking up items.
+			- Slow you down.
+			- One at a time.
+	- ENDGAME:
+		- Bigger nicer looking igloo?
+		- Things to find:
+			- Ice Fire?? 
+			- Bed
+			- Building Blocks
+			- Door
+			- Christmas Lights
+			- Chimney
+		- Female Penguin		
+OPTIONAL:
+	- Mechanics to grab items.
+	- Boss battle.
+	- Ways to delay/get around enemies with items.
+	- Procedural generation of placements.
+	- 1h/2h items.
