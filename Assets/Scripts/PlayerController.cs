@@ -7,8 +7,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private readonly float jumpPower = 100;
     private readonly float velocityLimit = 4;
-    [SerializeField] private readonly float waterOffset = -1.6f;
-    [SerializeField] private float itemPickUpRange = 1f;
+    private readonly float waterOffset = -1.6f;
+    private readonly float itemPickUpRange = 1f;
     private float belowWaterAmount;
 
     private void Awake() {
@@ -41,11 +41,16 @@ public class PlayerController : MonoBehaviour
             RenderSettings.fogDensity = 0.035f;
         }
         if (Input.GetKey(KeyCode.E)) {
-            GameObject itemToGrab;
+            GameObject itemToGrab = null;
             foreach (GameObject current in GameController.GetItems()) {
                 if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
                     itemToGrab = current;
                 }
+            }
+            if (itemToGrab != null) {
+                GameController.RemoveItem(itemToGrab);
+                itemToGrab.GetComponent<ItemController>().DoTheThing();
+
             }
         }
     }

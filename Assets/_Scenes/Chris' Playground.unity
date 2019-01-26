@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 290767949}
   - component: {fileID: 290767948}
   - component: {fileID: 290767947}
+  - component: {fileID: 290767950}
   m_Layer: 0
   m_Name: Item1
   m_TagString: Item
@@ -335,6 +336,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290767945}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &290767950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290767945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7f5c547bbe7a954e973b770124a78f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &340612266 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 6ff91c159457a475bb94b8c2e15321f3,
@@ -381,8 +394,8 @@ Camera:
   m_GameObject: {fileID: 395442285}
   m_Enabled: 0
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_projectionMatrixMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -402,7 +415,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967279
+    m_Bits: 0
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -422,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395442285}
   m_LocalRotation: {x: -0.13052617, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -0.033, y: -2.5129998, z: 1.3180001}
+  m_LocalPosition: {x: -0.033, y: -2.9629996, z: 1.3180001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
