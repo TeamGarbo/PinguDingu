@@ -28,6 +28,7 @@ public class EnemyController : MonoBehaviour
         else if (chasing && distanceToPlayer < killDistance) {
             // KILL
             chasing = false;
+            enabled = false;
         }
         else if (chasing && distanceToPlayer > chaseDistance) {
             chasing = false;
