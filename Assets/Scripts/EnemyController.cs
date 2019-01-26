@@ -4,10 +4,10 @@ using static GameController;
 
 public class EnemyController : MonoBehaviour
 {
-    public Transform player;
-    public int moveSpeed = 5;
+    private Transform player;
+    public float moveSpeed = 5;
     public int maxDist = 10;
-    public int minDist = 0;
+    public int minDist = 1;
 
 
     void Awake ()
