@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8115099877487412067}
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: -0.033, y: 2.457, z: -2.432}
+  m_LocalPosition: {x: -0.033, y: 2.843, z: -3.872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8115099877735514220}
@@ -194,8 +194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovingTurnSpeed: 360
-  m_StationaryTurnSpeed: 360
-  m_JumpPower: 0
+  m_StationaryTurnSpeed: 180
+  m_JumpPower: 6
   m_GravityMultiplier: 1
   m_RunCycleLegOffset: 0.2
   m_MoveSpeedMultiplier: 1
@@ -213,8 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05651bb1756f85e42bb3aacb3c48e19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPower: 100
-  velocityLimit: 4
+  itemPickUpRange: 0
   velocity: 0
 --- !u!1 &8115099877983423615
 GameObject:
@@ -227,7 +226,6 @@ GameObject:
   - component: {fileID: 8115099877983423612}
   - component: {fileID: 8115099877983423587}
   - component: {fileID: 8115099877983423586}
-  - component: {fileID: 8115099877983423613}
   m_Layer: 0
   m_Name: Player Model
   m_TagString: Untagged
@@ -294,17 +292,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8115099877983423613
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8115099877983423615}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
