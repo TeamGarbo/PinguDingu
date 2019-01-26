@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58cece660ebf5ba45b5441bad65ec6db
+guid: 17f45a18fc18f0f4196704ab95b14949
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -27,12 +27,10 @@ ModelImporter:
     100042: PenguinArmature
     100044: PenguinBody
     100046: //RootNode
-    100048: Pupil
-    100050: Pupil_001
-    100052: ShoulderLeft
-    100054: ShoulderRight
-    100056: TorsoLower
-    100058: TorsoUpper
+    100048: ShoulderLeft
+    100050: ShoulderRight
+    100052: TorsoLower
+    100054: TorsoUpper
     400000: ArmL
     400002: ArmLeftLower
     400004: ArmLeftUpper
@@ -57,31 +55,24 @@ ModelImporter:
     400042: PenguinArmature
     400044: PenguinBody
     400046: //RootNode
-    400048: Pupil
-    400050: Pupil_001
-    400052: ShoulderLeft
-    400054: ShoulderRight
-    400056: TorsoLower
-    400058: TorsoUpper
+    400048: ShoulderLeft
+    400050: ShoulderRight
+    400052: TorsoLower
+    400054: TorsoUpper
     2100000: unnamed
-    2300000: Pupil
-    2300002: Pupil_001
-    3300000: Pupil
-    3300002: Pupil_001
     4300000: FootR
     4300002: ArmR
     4300004: PenguinBody
     4300006: Beak_Lower
     4300008: Beak_Upper
     4300010: EyeL
-    4300012: Pupil
-    4300014: EyeR
-    4300016: Pupil_001
-    4300018: ArmL
-    4300020: FootL
+    4300012: EyeR
+    4300014: ArmL
+    4300016: FootL
     7400000: Default Take
     7400002: Idle1
-    7400004: Walk
+    7400004: Swim
+    7400006: Walk
     9500000: //RootNode
     13700000: ArmL
     13700002: ArmR
@@ -92,7 +83,6 @@ ModelImporter:
     13700012: FootL
     13700014: FootR
     13700016: PenguinBody
-    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -125,14 +115,14 @@ ModelImporter:
       name: Default Take
       takeName: Default Take
       firstFrame: 0
-      lastFrame: 38
+      lastFrame: 28
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -161,7 +151,35 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Swim
+      takeName: Swim
+      firstFrame: 0
+      lastFrame: 31
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -188,7 +206,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

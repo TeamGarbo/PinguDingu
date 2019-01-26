@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
+    private Animator an;
     private readonly float jumpPower = 100;
     private readonly float velocityLimit = 4;
     private readonly float waterOffset = -1.6f;
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
+        an = transform.GetChild(1).GetComponent<Animator>();
         GameController.SetPlayer(gameObject);
         belowWaterAmount = GameController.GetWater().transform.position.y + waterOffset;
     }
@@ -21,6 +23,11 @@ public class PlayerController : MonoBehaviour
     void Update() {
         if (transform.position.y < belowWaterAmount) {
             RenderSettings.fogDensity = 0.1f;
+            if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
+                an.Play("SwimTransition");
+            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 120 && an.gameObject.transform.rotation.x > 60) {
+                an.gameObject.transform.Rotate(new Vector3(90, 0, 0));
+            }
             // ----------------------------------WATER CODE----------------------------------
             if (Input.GetKey(KeyCode.Space)) {
                 rb.AddForce(Vector3.up * jumpPower);
@@ -39,6 +46,11 @@ public class PlayerController : MonoBehaviour
         }
         else {
             RenderSettings.fogDensity = 0.035f;
+            if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim"))
+                an.Play("WalkTransition");
+            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x != 0) {
+                an.gameObject.transform.Rotate(new Vector3(-90, 0, 0));
+            }
         }
         if (Input.GetKey(KeyCode.E)) {
             GameObject itemToGrab = null;
