@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void Update() {
         if (transform.position.y < belowWaterAmount) {
             RenderSettings.fogDensity = 0.1f;
+            GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
                 an.Play("SwimTransition");
             else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 120 && an.gameObject.transform.rotation.x > 60) {
@@ -46,11 +47,16 @@ public class PlayerController : MonoBehaviour
             // ------------------------------------------------------------------------------
         }
         else {
+            GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 1f;
             RenderSettings.fogDensity = 0.035f;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim"))
                 an.Play("WalkTransition");
             else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x != 0) {
                 an.gameObject.transform.Rotate(new Vector3(-90, 0, 0));
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
+                an.Play("Jump");
             }
         }
         if (Input.GetKey(KeyCode.E)) {
