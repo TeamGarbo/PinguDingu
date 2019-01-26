@@ -9,6 +9,42 @@ public static class GameController {
     private static GameObject Igloo;
     private static GameObject[] Items;
 
+    private static int MaxLives = 3;
+    private static int CurrentLives = 2;
+
+    public static int setMaxLives(int maxLives){
+        MaxLives = maxLives;
+        return MaxLives;
+    }
+
+    public static int getMaxLives(){
+        return MaxLives;
+    }
+
+    public static int removeLife(){
+        CurrentLives -= 1;
+        return CurrentLives;
+    }
+
+    public static int addLife(){
+        CurrentLives +=1;
+        return CurrentLives;
+    }
+
+    public static int SetLives(int lives){
+        CurrentLives = lives;
+        return CurrentLives;
+    }
+
+    public static int getLives(){
+        return CurrentLives;
+    }
+
+    public static int resetLives(){
+        CurrentLives = MaxLives;
+        return CurrentLives;
+    }
+
     public static GameObject GetWater() {
         if (Water != null) {
             return Water;
