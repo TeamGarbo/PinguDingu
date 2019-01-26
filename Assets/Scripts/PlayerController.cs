@@ -5,37 +5,40 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody rb;
-    [SerializeField] private float jumpPower;
-    [SerializeField] private float velocityLimit;
+    private readonly float jumpPower = 100;
+    private readonly float velocityLimit = 4;
+    [SerializeField] private readonly float waterOffset = -1.1f;
+    private float belowWaterAmount;
     public float velocity;
 
-    // Start is called before the first frame update
-    private void Start() {
+    private void Awake() {
         rb = GetComponent<Rigidbody>();
-        GameController.Player = gameObject;
+        GameController.SetPlayer(gameObject);
+        belowWaterAmount = GameController.GetWater().transform.position.y + waterOffset;
     }
 
     // Update is called once per frame
     void Update() {
-        // ----------------------------------MOVEMENT CODE----------------------------------
-        if (Input.GetKey(KeyCode.Space)) {
-            rb.AddForce(Vector3.up * jumpPower);
+        if (transform.position.y < belowWaterAmount) {
+            // ----------------------------------MOVEMENT CODE----------------------------------
+            if (Input.GetKey(KeyCode.Space)) {
+                rb.AddForce(Vector3.up * jumpPower);
+            }
+            if (Input.GetKey(KeyCode.LeftControl)) {
+                rb.AddForce(Vector3.down * jumpPower);
+            }
+            velocity = rb.velocity.y;
+            if (rb.velocity.y > velocityLimit) {
+                rb.velocity = new Vector3(rb.velocity.x, velocityLimit, rb.velocity.z);
+            }
+            else if (rb.velocity.y < -velocityLimit) {
+                rb.velocity = new Vector3(rb.velocity.x, -velocityLimit, rb.velocity.z);
+            }
+            // ------------------------------------------------------------------------------
         }
-        if (Input.GetKey(KeyCode.LeftControl)) {
-            rb.AddForce(Vector3.down * jumpPower);
-        }
-        velocity = rb.velocity.y;
-        if (rb.velocity.y > velocityLimit) {
-            rb.velocity = new Vector3(rb.velocity.x, velocityLimit, rb.velocity.z);
-        }
-        else if (rb.velocity.y < -velocityLimit) {
-            rb.velocity = new Vector3(rb.velocity.x, -velocityLimit, rb.velocity.z);
-        }
-        // ------------------------------------------------------------------------------
 
         if (Input.GetKey(KeyCode.E)) {
             // DO PICKUP STUFF I GUESS
         }
-
     }
 }
