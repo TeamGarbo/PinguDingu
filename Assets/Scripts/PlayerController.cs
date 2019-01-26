@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
     private readonly float jumpPower = 100;
     private readonly float velocityLimit = 4;
     private readonly float waterOffset = -1.6f;
-    private readonly float itemPickUpRange = 1f;
+    private readonly float itemPickUpRange = 2f;
     private float belowWaterAmount;
+    private GameObject holdingItem = null;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -57,8 +58,10 @@ public class PlayerController : MonoBehaviour
             if (GameController.GetItems().Length > 0)
                 foreach (GameObject current in GameController.GetItems())
                     if (current != null)
-                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange)
+                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
                             itemToGrab = current;
+                            holdingItem = current;
+                        }
 
             if (itemToGrab != null) {
                 GameController.RemoveItem(itemToGrab);
@@ -66,5 +69,15 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.name == "Iceplace"){
+            if (holdingItem != null){
+                holdingItem.GetComponent<ItemController>().PlaceInsideHouse();
+                holdingItem = null;
+            }
+        };
     }
 }

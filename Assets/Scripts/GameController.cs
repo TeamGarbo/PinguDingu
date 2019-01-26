@@ -6,6 +6,7 @@ public static class GameController {
 
     private static GameObject Player;
     private static GameObject Water;
+    private static GameObject Igloo;
     private static GameObject[] Items;
 
     public static GameObject GetWater() {
@@ -50,6 +51,16 @@ public static class GameController {
             }
         }
         return false;
+    }
+
+    public static GameObject GetIgloo() {
+        if (Igloo != null) {
+            return Igloo;
+        }
+        else {
+            Igloo = GameObject.Find("Igloo");
+            return Igloo;
+        }
     }
 
 }
