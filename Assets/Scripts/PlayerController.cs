@@ -20,9 +20,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (transform.position.y < belowWaterAmount) {
-            if (!RenderSettings.fog) {
-                RenderSettings.fog = true;
-            }
+            RenderSettings.fogDensity = 0.1f;
             // ----------------------------------WATER CODE----------------------------------
             if (Input.GetKey(KeyCode.Space)) {
                 rb.AddForce(Vector3.up * jumpPower);
@@ -39,8 +37,8 @@ public class PlayerController : MonoBehaviour
             }
             // ------------------------------------------------------------------------------
         }
-        else if (RenderSettings.fog) {
-            RenderSettings.fog = false;
+        else {
+            RenderSettings.fogDensity = 0.035f;
         }
 
         if (Input.GetKey(KeyCode.E)) {
