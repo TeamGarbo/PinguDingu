@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        
+        // ----------------------------------MOVEMENT CODE----------------------------------
         if (Input.GetKey(KeyCode.Space)) {
             rb.AddForce(Vector3.up * jumpPower);
         }
@@ -30,5 +30,11 @@ public class PlayerController : MonoBehaviour
         else if (rb.velocity.y < -velocityLimit) {
             rb.velocity = new Vector3(rb.velocity.x, -velocityLimit, rb.velocity.z);
         }
+        // ------------------------------------------------------------------------------
+
+        if (Input.GetKey(KeyCode.E)) {
+            // DO PICKUP STUFF I GUESS
+        }
+
     }
 }
