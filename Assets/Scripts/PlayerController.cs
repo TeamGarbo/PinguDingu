@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public GameObject holdingItem = null;
     public bool insideIgloo = false;
 
+    public Transform successSmoke;
+
     private void Awake() {
         rb = GetComponent<Rigidbody>();
         an = transform.GetChild(1).GetComponent<Animator>();
@@ -79,11 +81,19 @@ public class PlayerController : MonoBehaviour
             } else {
                 if (insideIgloo){
                     Debug.Log("you put something inside the igloo :)");
+                    MakeSmoke(new Vector3(0,0,0));
                 }
                 holdingItem.GetComponent<ItemController>().Drop();
                 holdingItem = null;
             }
         }
+    }
+
+    private void MakeSmoke(Vector3 localOffset){
+        Transform successSmokeObject = Instantiate(successSmoke, new Vector3(0,0,0), Quaternion.identity);
+        successSmokeObject.parent = GameController.GetIgloo().transform;
+        // successSmokeObject.localPosition = new Vector3(0,0,0);
+        Destroy(successSmokeObject.gameObject, 1.5f);
     }
 
     private void OnTriggerEnter(Collider other)
