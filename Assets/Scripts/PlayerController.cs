@@ -42,11 +42,12 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.E)) {
             GameObject itemToGrab = null;
-            foreach (GameObject current in GameController.GetItems()) {
-                if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
-                    itemToGrab = current;
-                }
-            }
+            if (GameController.GetItems().Length > 0)
+                foreach (GameObject current in GameController.GetItems())
+                    if (current != null)
+                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange)
+                            itemToGrab = current;
+
             if (itemToGrab != null) {
                 GameController.RemoveItem(itemToGrab);
                 itemToGrab.GetComponent<ItemController>().DoTheThing();
