@@ -213,8 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05651bb1756f85e42bb3aacb3c48e19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPickUpRange: 0
-  velocity: 0
 --- !u!1 &8115099877983423615
 GameObject:
   m_ObjectHideFlags: 0
