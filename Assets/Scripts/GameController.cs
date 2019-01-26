@@ -42,4 +42,14 @@ public static class GameController {
         }        
     }
 
+    public static bool RemoveItem(GameObject item) {
+        for (int i = 0; i < Items.Length; i++) {
+            if (Items[i].Equals(item)) {
+                Items[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

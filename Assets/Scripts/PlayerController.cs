@@ -40,11 +40,11 @@ public class PlayerController : MonoBehaviour
         else {
             RenderSettings.fogDensity = 0.035f;
         }
-
         if (Input.GetKey(KeyCode.E)) {
+            GameObject itemToGrab;
             foreach (GameObject current in GameController.GetItems()) {
                 if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
-                    current.SetActive(false);
+                    itemToGrab = current;
                 }
             }
         }
