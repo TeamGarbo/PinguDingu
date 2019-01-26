@@ -1,14 +1,24 @@
 fileFormatVersion: 2
-guid: 6ff91c159457a475bb94b8c2e15321f3
+guid: b58a419f0f7ddec4dbcac6e6f0baedcd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Handle
+    100004: HandleConnector
     400000: //RootNode
+    400002: Handle
+    400004: HandleConnector
     2100000: unnamed
     2300000: //RootNode
+    2300002: Handle
+    2300004: HandleConnector
     3300000: //RootNode
-    4300000: Iceberg
+    3300002: Handle
+    3300004: HandleConnector
+    4300000: IglooDoorL
+    4300002: Handle
+    4300004: HandleConnector
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

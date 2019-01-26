@@ -23,12 +23,12 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (transform.position.y < belowWaterAmount) {
-            RenderSettings.fogDensity = 0.1f;
+            RenderSettings.fogDensity = 0.035f;
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
                 an.Play("SwimTransition");
-            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 120 && an.gameObject.transform.rotation.x > 60) {
-                an.gameObject.transform.Rotate(new Vector3(90, 0, 0));
+            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 10) {
+                an.gameObject.transform.eulerAngles = new Vector3(90, transform.eulerAngles.y, 0);
             }
             // ----------------------------------WATER CODE----------------------------------
             if (Input.GetKey(KeyCode.Space)) {
@@ -48,16 +48,21 @@ public class PlayerController : MonoBehaviour
         }
         else {
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 1f;
-            RenderSettings.fogDensity = 0.035f;
-            if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim"))
+            RenderSettings.fogDensity = 0.002f;
+            if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
                 an.Play("WalkTransition");
-            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x != 0) {
-                an.gameObject.transform.Rotate(new Vector3(-90, 0, 0));
+            }else if (rb.velocity.magnitude < 0.2f) {
+                an.Play("Idle1");
+            }
+            else if (!an.GetCurrentAnimatorStateInfo(0).IsName("WalkTransition") && !an.GetCurrentAnimatorStateInfo(0).IsName("Jump")) {
+                an.Play("Walk");
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
                 an.Play("Jump");
             }
+
+            
         }
         if (Input.GetKey(KeyCode.E)) {
             GameObject itemToGrab = null;
