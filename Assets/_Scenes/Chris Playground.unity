@@ -435,12 +435,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395442285}
-  m_LocalRotation: {x: -0.13052617, y: 0, z: 0, w: 0.9914449}
-  m_LocalPosition: {x: -0.033, y: -3.2029998, z: -0.872}
+  m_LocalRotation: {x: -0.009054299, y: 0.33762833, z: 0.003251376, w: 0.9412304}
+  m_LocalPosition: {x: -12.015572, y: -9.058536, z: -24.741798}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!45 &395442288
 Skybox:
@@ -508,6 +508,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6ff91c159457a475bb94b8c2e15321f3, type: 3}
       propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 6ff91c159457a475bb94b8c2e15321f3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2e30e86d7ee69e944a980a6e116ffb75, type: 2}
+    - target: {fileID: 9500000, guid: 6ff91c159457a475bb94b8c2e15321f3, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -655,7 +663,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026300085
 GameObject:
@@ -772,13 +780,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1104561853}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.2455854, y: 4.343649, z: 2.007123}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.2455854, y: -2.0071235, z: 1.4436487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 290767946}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 488012794}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2032006462
 GameObject:
