@@ -6,6 +6,7 @@ public static class GameController {
 
     private static GameObject Player;
     private static GameObject Water;
+    private static GameObject[] Items;
 
     public static GameObject GetWater() {
         if (Water != null) {
@@ -29,6 +30,16 @@ public static class GameController {
 
     public static void SetPlayer(GameObject player) {
         Player = player;
+    }
+
+    public static GameObject[] GetItems() {
+        if (Items != null) {
+            return Items;
+        }
+        else {
+            Items = GameObject.FindGameObjectsWithTag("Item");
+            return Items;
+        }        
     }
 
 }
