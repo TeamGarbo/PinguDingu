@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour
     private readonly float waterOffset = -1.6f;
     private readonly float itemPickUpRange = 2f;
     private float belowWaterAmount;
-    private GameObject holdingItem = null;
+    public GameObject holdingItem = null;
+    public bool insideIgloo = false;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -53,20 +54,28 @@ public class PlayerController : MonoBehaviour
                 an.gameObject.transform.Rotate(new Vector3(-90, 0, 0));
             }
         }
-        if (Input.GetKey(KeyCode.E)) {
-            GameObject itemToGrab = null;
-            if (GameController.GetItems().Length > 0)
-                foreach (GameObject current in GameController.GetItems())
-                    if (current != null)
-                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
-                            itemToGrab = current;
-                            holdingItem = current;
-                        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (holdingItem == null) {
+                GameObject itemToGrab = null;
+                if (GameController.GetItems().Length > 0)
+                    foreach (GameObject current in GameController.GetItems())
+                        if (current != null)
+                            if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
+                                itemToGrab = current;
+                                holdingItem = current;
+                            }
 
-            if (itemToGrab != null) {
-                GameController.RemoveItem(itemToGrab);
-                itemToGrab.GetComponent<ItemController>().DoTheThing();
+                if (itemToGrab != null) {
+                    // GameController.RemoveItem(itemToGrab);
+                    itemToGrab.GetComponent<ItemController>().DoTheThing();
 
+                }
+            } else {
+                if (insideIgloo){
+                    Debug.Log("you put something inside the igloo :)");
+                }
+                holdingItem.GetComponent<ItemController>().Drop();
+                holdingItem = null;
             }
         }
     }
@@ -74,10 +83,16 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Iceplace"){
-            if (holdingItem != null){
-                holdingItem.GetComponent<ItemController>().PlaceInsideHouse();
-                holdingItem = null;
-            }
+            insideIgloo = true;
+        };
+
+        // change the camera
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Iceplace"){
+            insideIgloo = false;
         };
     }
 }
