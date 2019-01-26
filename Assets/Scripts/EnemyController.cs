@@ -5,27 +5,38 @@ using static GameController;
 public class EnemyController : MonoBehaviour
 {
     private Transform player;
-    public float moveSpeed = 5;
-    public int maxDist = 10;
-    public int minDist = 1;
+    private bool chasing = false;
+    private float distanceToPlayer;
+    [SerializeField] private float moveSpeed;
+    private float seekDistance = 7.5f;
+    private float chaseDistance = 10f;
+    private float killDistance = 1.2f;
 
 
-    void Awake ()
-    {
-        player = GameController.GetPlayer().transform;
+    void Start() {
+        player = GetPlayer().transform.GetChild(1);
     }
 
 
-    void FixedUpdate ()
-    {
-        transform.LookAt(player);
+    void FixedUpdate() {
+        distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        // If the enemy is away from the player
-        if (Vector3.Distance(transform.position, player.position) >= minDist) {
-            // Move toward the player
-            gameObject.transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed);
-        } else {
-            // die
+        if (!chasing && distanceToPlayer < seekDistance) {
+            chasing = true;
+            Debug.Log("Chasing! " + distanceToPlayer);
+        }
+        else if (chasing && distanceToPlayer < killDistance) {
+            // KILL
+            chasing = false;
+        }
+        else if (chasing && distanceToPlayer > chaseDistance) {
+            chasing = false;
+            Debug.Log("HE RAN AWAY! " + distanceToPlayer);
+        }
+
+        if (chasing) {
+            transform.LookAt(player);
+            transform.Translate(Vector3.forward * moveSpeed);
         }
     } 
 }
