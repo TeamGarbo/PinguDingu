@@ -24,7 +24,6 @@ public class WinDetector : MonoBehaviour
         if (numCollected == allItems.Length){
             gameWon();
         }
-        Debug.Log(numCollected);
     }
 
     private void gameWon(){
