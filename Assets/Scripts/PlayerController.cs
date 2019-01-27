@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
                     Debug.Log("you put something inside the igloo :)");
                     MakeSmoke(new Vector3(0,0,0));
                 }
-                holdingItem.GetComponent<ItemController>().Drop();
+                holdingItem.GetComponent<ItemController>().Drop(insideIgloo);
                 holdingItem = null;
             }
         }
