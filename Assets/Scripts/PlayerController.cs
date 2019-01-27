@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private float belowWaterAmount;
     public GameObject holdingItem = null;
     public bool insideIgloo = false;
+    public Camera camera;
 
     public Transform successSmoke;
 
@@ -25,6 +26,13 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        RaycastHit rayCastHit;
+        int layerMask = 1 << 3;
+        if (Physics.Raycast(transform.position, -(transform.position-camera.transform.position), out rayCastHit, layerMask))
+            camera.transform.position = rayCastHit.point;
+        else
+            camera.transform.localPosition = new Vector3(-0.033f, 3.425f, -5.339f);
+
         if (transform.position.y < belowWaterAmount) {
             RenderSettings.fogDensity = 0.035f;
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
