@@ -214,6 +214,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05651bb1756f85e42bb3aacb3c48e19f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holdingItem: {fileID: 0}
+  insideIgloo: 0
+  successSmoke: {fileID: 4738182214122888507, guid: d667417db5fe14f779b8b8e2d6576542,
+    type: 3}
 --- !u!1001 &5260867999094635196
 PrefabInstance:
   m_ObjectHideFlags: 0

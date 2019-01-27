@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     private readonly float waterOffset = -1.6f;
     private readonly float itemPickUpRange = 2f;
     private float belowWaterAmount;
-    private GameObject holdingItem = null;
+    public GameObject holdingItem = null;
+    public bool insideIgloo = false;
+
+    public Transform successSmoke;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -64,31 +67,53 @@ public class PlayerController : MonoBehaviour
 
             
         }
-        if (Input.GetKey(KeyCode.E)) {
-            GameObject itemToGrab = null;
-            if (GameController.GetItems().Length > 0)
-                foreach (GameObject current in GameController.GetItems())
-                    if (current != null)
-                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
-                            itemToGrab = current;
-                            holdingItem = current;
-                        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (holdingItem == null) {
+                GameObject itemToGrab = null;
+                if (GameController.GetItems().Length > 0)
+                    foreach (GameObject current in GameController.GetItems())
+                        if (current != null)
+                            if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
+                                itemToGrab = current;
+                                holdingItem = current;
+                            }
 
-            if (itemToGrab != null) {
-                GameController.RemoveItem(itemToGrab);
-                itemToGrab.GetComponent<ItemController>().DoTheThing();
+                if (itemToGrab != null) {
+                    // GameController.RemoveItem(itemToGrab);
+                    itemToGrab.GetComponent<ItemController>().DoTheThing();
 
+                }
+            } else {
+                if (insideIgloo){
+                    Debug.Log("you put something inside the igloo :)");
+                    MakeSmoke(new Vector3(0,0,0));
+                }
+                holdingItem.GetComponent<ItemController>().Drop();
+                holdingItem = null;
             }
         }
+    }
+
+    private void MakeSmoke(Vector3 localOffset){
+        Transform successSmokeObject = Instantiate(successSmoke, new Vector3(0,0,0), Quaternion.identity);
+        successSmokeObject.parent = GameController.GetIgloo().transform;
+        // successSmokeObject.localPosition = new Vector3(0,0,0);
+        Destroy(successSmokeObject.gameObject, 1.5f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Iceplace"){
-            if (holdingItem != null){
-                holdingItem.GetComponent<ItemController>().PlaceInsideHouse();
-                holdingItem = null;
-            }
+            insideIgloo = true;
+        };
+
+        // change the camera
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Iceplace"){
+            insideIgloo = false;
         };
     }
 }
