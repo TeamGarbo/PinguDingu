@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public GameObject holdingItem = null;
     public bool insideIgloo = false;
     public Camera camera;
-
+    private GameObject mainCam;
     public Transform successSmoke;
 
     private void Awake() {
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
         an = transform.GetChild(1).GetComponent<Animator>();
         GameController.SetPlayer(gameObject);
         belowWaterAmount = GameController.GetWater().transform.position.y + waterOffset;
+        mainCam = GameObject.Find("Main Camera");
     }
 
     // Update is called once per frame
@@ -34,12 +35,14 @@ public class PlayerController : MonoBehaviour
             camera.transform.localPosition = new Vector3(-0.033f, 3.425f, -5.339f);
 
         if (transform.position.y < belowWaterAmount) {
-            RenderSettings.fogDensity = 0.035f;
+            RenderSettings.fogDensity = 0.01f;
+            
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
                 an.Play("SwimTransition");
-            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 10) {
+            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.localRotation.x < 10) {
                 an.gameObject.transform.eulerAngles = new Vector3(90, transform.eulerAngles.y, 0);
+                mainCam.transform.localEulerAngles = new Vector3(20, mainCam.transform.localEulerAngles.y, mainCam.transform.localEulerAngles.z);
             }
             // ----------------------------------WATER CODE----------------------------------
             if (Input.GetKey(KeyCode.Space)) {
@@ -62,7 +65,9 @@ public class PlayerController : MonoBehaviour
             RenderSettings.fogDensity = 0.002f;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
                 an.Play("WalkTransition");
-            }else if (rb.velocity.magnitude < 0.2f && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
+                mainCam.transform.localEulerAngles = new Vector3(10, mainCam.transform.localEulerAngles.y, mainCam.transform.localEulerAngles.z);
+            }
+            else if (rb.velocity.magnitude < 0.2f && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
                 an.Play("Idle1");
             }
             else if (!an.GetCurrentAnimatorStateInfo(0).IsName("WalkTransition") && !an.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
