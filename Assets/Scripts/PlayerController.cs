@@ -62,10 +62,10 @@ public class PlayerController : MonoBehaviour
             RenderSettings.fogDensity = 0.002f;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
                 an.Play("WalkTransition");
-            }else if (rb.velocity.magnitude < 0.2f) {
+            }else if (rb.velocity.magnitude < 0.2f && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
                 an.Play("Idle1");
             }
-            else if (!an.GetCurrentAnimatorStateInfo(0).IsName("WalkTransition") && !an.GetCurrentAnimatorStateInfo(0).IsName("Jump")) {
+            else if (!an.GetCurrentAnimatorStateInfo(0).IsName("WalkTransition") && !an.GetCurrentAnimatorStateInfo(0).IsName("Jump") && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
                 an.Play("Walk");
             }
 
