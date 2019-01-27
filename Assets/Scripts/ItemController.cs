@@ -11,12 +11,15 @@ public class ItemController : MonoBehaviour {
     private Vector3 originalRotation;
     [SerializeField] private Vector3 dropPosition;
     [SerializeField] private Vector3 dropRotation;
+    [SerializeField] private Vector3 carryScale;
+    [SerializeField] private Vector3 originalScale;
 
     public void DoTheThing() {
         transform.SetParent(GameController.GetPlayer().transform.GetChild(1));
         originalRotation = transform.eulerAngles;
         transform.localPosition = carryPosition;
-        transform.eulerAngles = carryRotation;
+        transform.localEulerAngles = carryRotation;
+        transform.localScale = carryScale;
         if (GetComponent<Collider>() != null) {
             GetComponent<Collider>().enabled = false;
         }
@@ -43,6 +46,7 @@ public class ItemController : MonoBehaviour {
 
                 transform.SetParent(GameController.GetIgloo().transform);
                 transform.eulerAngles = originalRotation;
+                transform.localScale = originalScale;
                 // transform.position = new Vector3(transform.position.x, GameController.GetPlayer().transform.position.y+0.5f, transform.position.z);
                 transform.localPosition = dropPosition;
                 transform.localRotation = Quaternion.Euler(dropRotation.x, dropRotation.y, dropRotation.z);
