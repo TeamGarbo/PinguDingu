@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public static class GameController {
 
@@ -23,6 +24,10 @@ public static class GameController {
 
     public static int removeLife(){
         CurrentLives -= 1;
+
+        if (CurrentLives == 0)
+            SceneManager.LoadScene("DeathScene");
+
         return CurrentLives;
     }
 
