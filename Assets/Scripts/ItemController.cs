@@ -20,4 +20,8 @@ public class ItemController : MonoBehaviour {
         transform.localPosition = new Vector3(1.469f, 0.3104561f, 2.492f);
         transform.localPosition = new Vector3(0.827f, 0.09f, 0.125f);
     }
+
+    public void Drop() {
+        transform.SetParent(GameController.GetIgloo().transform);
+    }
 }

@@ -1,46 +1,14 @@
 fileFormatVersion: 2
-guid: f6167852c66b4429fa88fb7f1f5e5518
+guid: 6a97dc226a1f120488fe0777e927a508
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Handle
-    100002: Handle_001
-    100004: HandleConnector
-    100006: HandleConnector_001
-    100008: Igloo
-    100010: //RootNode
-    100012: IglooDoorL
-    100014: IglooDoorL_001
-    400000: Handle
-    400002: Handle_001
-    400004: HandleConnector
-    400006: HandleConnector_001
-    400008: Igloo
-    400010: //RootNode
-    400012: IglooDoorL
-    400014: IglooDoorL_001
+    100000: //RootNode
+    400000: //RootNode
     2100000: unnamed
-    2300000: Handle
-    2300002: Handle_001
-    2300004: HandleConnector
-    2300006: HandleConnector_001
-    2300008: Igloo
-    2300010: IglooDoorL
-    2300012: IglooDoorL_001
-    3300000: Handle
-    3300002: Handle_001
-    3300004: HandleConnector
-    3300006: HandleConnector_001
-    3300008: Igloo
-    3300010: IglooDoorL
-    3300012: IglooDoorL_001
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Igloo
-    4300002: IglooDoorL
-    4300004: Handle
-    4300006: HandleConnector
-    4300008: IglooDoorL_001
-    4300010: Handle_001
-    4300012: HandleConnector_001
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

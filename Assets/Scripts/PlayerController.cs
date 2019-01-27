@@ -11,7 +11,11 @@ public class PlayerController : MonoBehaviour
     private readonly float waterOffset = -1.6f;
     private readonly float itemPickUpRange = 2f;
     private float belowWaterAmount;
-    private GameObject holdingItem = null;
+    public GameObject holdingItem = null;
+    public bool insideIgloo = false;
+    public Camera camera;
+
+    public Transform successSmoke;
 
     private void Awake() {
         rb = GetComponent<Rigidbody>();
@@ -22,13 +26,20 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        RaycastHit rayCastHit;
+        int layerMask = 1 << 3;
+        if (Physics.Raycast(transform.position, -(transform.position-camera.transform.position), out rayCastHit, layerMask))
+            camera.transform.position = rayCastHit.point;
+        else
+            camera.transform.localPosition = new Vector3(-0.033f, 3.425f, -5.339f);
+
         if (transform.position.y < belowWaterAmount) {
-            RenderSettings.fogDensity = 0.1f;
+            RenderSettings.fogDensity = 0.035f;
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
                 an.Play("SwimTransition");
-            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 120 && an.gameObject.transform.rotation.x > 60) {
-                an.gameObject.transform.Rotate(new Vector3(90, 0, 0));
+            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x < 10) {
+                an.gameObject.transform.eulerAngles = new Vector3(90, transform.eulerAngles.y, 0);
             }
             // ----------------------------------WATER CODE----------------------------------
             if (Input.GetKey(KeyCode.Space)) {
@@ -48,42 +59,69 @@ public class PlayerController : MonoBehaviour
         }
         else {
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 1f;
-            RenderSettings.fogDensity = 0.035f;
-            if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim"))
+            RenderSettings.fogDensity = 0.002f;
+            if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
                 an.Play("WalkTransition");
-            else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.rotation.x != 0) {
-                an.gameObject.transform.Rotate(new Vector3(-90, 0, 0));
+            }else if (rb.velocity.magnitude < 0.2f) {
+                an.Play("Idle1");
+            }
+            else if (!an.GetCurrentAnimatorStateInfo(0).IsName("WalkTransition") && !an.GetCurrentAnimatorStateInfo(0).IsName("Jump")) {
+                an.Play("Walk");
             }
 
             if (Input.GetKeyDown(KeyCode.Space) && GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_IsGrounded) {
                 an.Play("Jump");
             }
+
+            
         }
-        if (Input.GetKey(KeyCode.E)) {
-            GameObject itemToGrab = null;
-            if (GameController.GetItems().Length > 0)
-                foreach (GameObject current in GameController.GetItems())
-                    if (current != null)
-                        if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
-                            itemToGrab = current;
-                            holdingItem = current;
-                        }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (holdingItem == null) {
+                GameObject itemToGrab = null;
+                if (GameController.GetItems().Length > 0)
+                    foreach (GameObject current in GameController.GetItems())
+                        if (current != null)
+                            if (Vector3.Distance(gameObject.transform.position, current.transform.position) < itemPickUpRange) {
+                                itemToGrab = current;
+                                holdingItem = current;
+                            }
 
-            if (itemToGrab != null) {
-                GameController.RemoveItem(itemToGrab);
-                itemToGrab.GetComponent<ItemController>().DoTheThing();
+                if (itemToGrab != null) {
+                    // GameController.RemoveItem(itemToGrab);
+                    itemToGrab.GetComponent<ItemController>().DoTheThing();
 
+                }
+            } else {
+                if (insideIgloo){
+                    Debug.Log("you put something inside the igloo :)");
+                    MakeSmoke(new Vector3(0,0,0));
+                }
+                holdingItem.GetComponent<ItemController>().Drop();
+                holdingItem = null;
             }
         }
+    }
+
+    private void MakeSmoke(Vector3 localOffset){
+        Transform successSmokeObject = Instantiate(successSmoke, new Vector3(0,0,0), Quaternion.identity);
+        successSmokeObject.parent = GameController.GetIgloo().transform;
+        // successSmokeObject.localPosition = new Vector3(0,0,0);
+        Destroy(successSmokeObject.gameObject, 1.5f);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Iceplace"){
-            if (holdingItem != null){
-                holdingItem.GetComponent<ItemController>().PlaceInsideHouse();
-                holdingItem = null;
-            }
+            insideIgloo = true;
+        };
+
+        // change the camera
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.name == "Iceplace"){
+            insideIgloo = false;
         };
     }
 }
