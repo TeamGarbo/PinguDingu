@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         }
         else {
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 1f;
-            RenderSettings.fogDensity = 0.002f;
+            RenderSettings.fogDensity = 0.007f;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
                 an.Play("WalkTransition");
                 mainCam.transform.localEulerAngles = new Vector3(10, mainCam.transform.localEulerAngles.y, mainCam.transform.localEulerAngles.z);

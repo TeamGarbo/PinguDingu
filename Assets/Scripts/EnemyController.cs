@@ -59,6 +59,7 @@ public class EnemyController : MonoBehaviour
 
             if (!chasing) {
                 transform.LookAt(patrolPoints[patrolIndex], Vector3.up);
+                transform.Translate(Vector3.forward * moveSpeed);
                
 
                 if (Vector3.Distance(transform.position, patrolPoints[patrolIndex]) < killDistance)
