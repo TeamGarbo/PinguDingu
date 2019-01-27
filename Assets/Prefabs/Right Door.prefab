@@ -42,10 +42,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightDoor
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -91,10 +87,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
       propertyPath: m_LocalScale.y
       value: 100.00006
       objectReference: {fileID: 0}
@@ -106,10 +98,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 13aedbc48d2b22e44a06661ff49ae081, type: 2}
-    - target: {fileID: 9500000, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5323b78d8d2306498375753ea1f6f21, type: 3}
 --- !u!4 &7266693500915681007 stripped

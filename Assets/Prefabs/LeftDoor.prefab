@@ -42,10 +42,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftDoor
       objectReference: {fileID: 0}
-    - target: {fileID: 100004, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -98,18 +94,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100.00006
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: f64d46bac1f908b4e832f53582b1d7cc, type: 2}
-    - target: {fileID: 9500000, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
 --- !u!4 &4549684008396968399 stripped
