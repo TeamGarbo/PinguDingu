@@ -36,8 +36,10 @@ public class PlayerController : MonoBehaviour
 
         if (transform.position.y < belowWaterAmount) {
             RenderSettings.fogDensity = 0.01f;
-            
+
+            GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_MoveSpeedMultiplier = 3;
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 100;
+
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Walk"))
                 an.Play("SwimTransition");
             else if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") && an.gameObject.transform.localRotation.x < 10) {
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour
             // ------------------------------------------------------------------------------
         }
         else {
+            GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_MoveSpeedMultiplier = 1;
             GetComponent<UnityStandardAssets.Characters.ThirdPerson.ThirdPersonCharacter>().m_GroundCheckDistance = 1f;
             RenderSettings.fogDensity = 0.007f;
             if (an.GetCurrentAnimatorStateInfo(0).IsName("Swim") || an.GetCurrentAnimatorStateInfo(0).IsName("SwimTransition")) {
