@@ -9,10 +9,10 @@ public class EnemyController : MonoBehaviour
     private Transform player;
     private bool chasing = false;
     private float distanceToPlayer;
-    [SerializeField] private float moveSpeed;
-    private float seekDistance = 7.5f;
-    private float chaseDistance = 10f;
-    private float killDistance = 1.2f;
+    [SerializeField]  private float moveSpeed;
+    [SerializeField]  private float seekDistance = 7.5f;
+    [SerializeField]  private float chaseDistance = 10f;
+    [SerializeField]  private float killDistance = 1.2f;
 
     private volatile bool takingABreak = false;
     private int MAX_DELAY = 2000;
