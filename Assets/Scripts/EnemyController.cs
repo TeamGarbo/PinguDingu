@@ -33,6 +33,11 @@ public class EnemyController : MonoBehaviour
             if (!chasing && distanceToPlayer < seekDistance) {
                 chasing = true;
             }
+
+            if(player.position.y > GameController.GetWater().transform.position.y + -1.6f){
+                chasing = false;
+            }
+
             else if (chasing && distanceToPlayer < killDistance) {
                 // KILL
                 chasing = false;
