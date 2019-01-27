@@ -50,7 +50,5 @@ public class ItemController : MonoBehaviour {
                 setPositionToPlayer();
             }
         }
-
-        
     }
 }
