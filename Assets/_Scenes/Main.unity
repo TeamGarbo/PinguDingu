@@ -540,7 +540,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395442285}
   m_LocalRotation: {x: -0.1736482, y: 0, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -0.033, y: -3.785, z: -2.1599998}
+  m_LocalPosition: {x: -0.033, y: -3.785, z: -2.3390002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -994,6 +994,32 @@ Transform:
   m_Father: {fileID: 591809750}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1338168188 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5260867997443374823, guid: a9f75cd97e5d4d34b91b104e414c3a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8115099876250074066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1338168191 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5260867997443374818, guid: a9f75cd97e5d4d34b91b104e414c3a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 8115099876250074066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1338168192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338168188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 0}
 --- !u!1 &1681555727
 GameObject:
   m_ObjectHideFlags: 0
@@ -1099,7 +1125,7 @@ GameObject:
   - component: {fileID: 1909651476}
   - component: {fileID: 1909651475}
   - component: {fileID: 1909651474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Sphere
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -1258,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032006462}
   m_LocalRotation: {x: -0.1736482, y: -0, z: -0, w: 0.9848078}
-  m_LocalPosition: {x: -0.033, y: -3.785, z: -2.1599998}
+  m_LocalPosition: {x: -0.033, y: -3.785, z: -2.3390002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 710757353}
@@ -1914,6 +1940,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260867997724608621, guid: a9f75cd97e5d4d34b91b104e414c3a2e,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1338168191}
+    - target: {fileID: 5260867997443374820, guid: a9f75cd97e5d4d34b91b104e414c3a2e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.339
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9f75cd97e5d4d34b91b104e414c3a2e, type: 3}
