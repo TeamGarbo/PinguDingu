@@ -32,7 +32,7 @@ public class ItemController : MonoBehaviour {
     }
 
     private void setPositionToPlayer(){
-        transform.SetParent(GameController.GetIgloo().transform);
+        //transform.SetParent(GameController.GetIgloo().transform);
         transform.eulerAngles = originalRotation;
         transform.position = new Vector3(transform.position.x, GameController.GetPlayer().transform.position.y+0.5f, transform.position.z);
     }
@@ -40,6 +40,9 @@ public class ItemController : MonoBehaviour {
     public void Drop(bool insideIgloo) {
         if (dropPosition.x == 0 && dropPosition.y == 0 && dropPosition.z == 0) {
             setPositionToPlayer();
+            if (insideIgloo){
+                transform.SetParent(GameController.GetIgloo().transform);
+            }
         } else {
             if (insideIgloo){
                 Debug.Log(dropPosition);
