@@ -81,8 +81,11 @@ ModelImporter:
     7400002: Damaged
     7400004: Idle1
     7400006: Jump
-    7400008: Swim
-    7400010: Walk
+    7400008: Sit
+    7400010: Sitting
+    7400012: Sitting_Idle
+    7400014: Swim
+    7400016: Walk
     9500000: //RootNode
     13700000: ArmL
     13700002: ArmR

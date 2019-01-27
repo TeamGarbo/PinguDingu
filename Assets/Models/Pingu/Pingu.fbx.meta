@@ -102,8 +102,11 @@ ModelImporter:
     7400000: PenguinArmature|Damaged
     7400002: PenguinArmature|Idle1
     7400004: PenguinArmature|Jump
-    7400006: PenguinArmature|Swim
-    7400008: PenguinArmature|Walk
+    7400006: PenguinArmature|Sit
+    7400008: PenguinArmature|Sitting
+    7400010: PenguinArmature|Sitting Idle
+    7400012: PenguinArmature|Swim
+    7400014: PenguinArmature|Walk
     9500000: //RootNode
     13700000: ArmL
     13700002: ArmR
