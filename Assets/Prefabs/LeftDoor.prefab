@@ -50,6 +50,19 @@ MonoBehaviour:
   dropRotation: {x: 90, y: 90, z: 90}
   carryScale: {x: 7, y: 7, z: 7}
   originalScale: {x: 1, y: 1, z: 1}
+--- !u!114 &2595531394006788978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4549684008396606959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcdcd85cdabbcb43a41775973c8a66f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openDistance: 5
 --- !u!1001 &4549684008396573515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -111,6 +124,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: f64d46bac1f908b4e832f53582b1d7cc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6, type: 3}
+--- !u!1 &4549684008396606959 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 4549684008396573515}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4549684008396968399 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: 09e9c7a7ff1c0724087d876fbb3bd6d6,

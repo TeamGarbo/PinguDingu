@@ -19,10 +19,19 @@ public class OpenDoorController : MonoBehaviour
     void Update() {
         if(Vector3.Distance(player.transform.position, transform.position) <= openDistance) {
             if(Input.GetKeyDown(KeyCode.F)) {
+                if (gameObject.name.Equals("LeftDoor"))
                 if(an.GetCurrentAnimatorStateInfo(0).IsName("DoorL Close")) {
                     an.Play("IglooDoorL Open");
                 } else {
                     an.Play("DoorL Close");
+                }
+                else {
+                    if (an.GetCurrentAnimatorStateInfo(0).IsName("DoorR Close")) {
+                        an.Play("DoorR Open");
+                    }
+                    else {
+                        an.Play("DoorR Close");
+                    }
                 }
             }
         }
