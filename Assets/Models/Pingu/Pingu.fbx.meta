@@ -32,12 +32,10 @@ ModelImporter:
     100052: PenguinArmature
     100054: PenguinBody
     100056: //RootNode
-    100058: Point.001
-    100060: ShoulderLeft
-    100062: ShoulderRight
-    100064: Sun
-    100066: TorsoLower
-    100068: TorsoUpper
+    100058: ShoulderLeft
+    100060: ShoulderRight
+    100062: TorsoLower
+    100064: TorsoUpper
     400000: ArmL
     400002: ArmLeftLower
     400004: ArmLeftLower_end
@@ -67,12 +65,10 @@ ModelImporter:
     400052: PenguinArmature
     400054: PenguinBody
     400056: //RootNode
-    400058: Point.001
-    400060: ShoulderLeft
-    400062: ShoulderRight
-    400064: Sun
-    400066: TorsoLower
-    400068: TorsoUpper
+    400058: ShoulderLeft
+    400060: ShoulderRight
+    400062: TorsoLower
+    400064: TorsoUpper
     2100000: Beak Lower
     2100002: Beak Upper
     2100004: Lefteye
@@ -103,13 +99,12 @@ ModelImporter:
     4300012: ArmR
     4300014: PenguinBody
     4300016: ArmL
-    7400000: PenguinArmature|Idle1
-    7400002: PenguinArmature|Jump
-    7400004: PenguinArmature|Swim
-    7400006: PenguinArmature|Walk
+    7400000: PenguinArmature|Damaged
+    7400002: PenguinArmature|Idle1
+    7400004: PenguinArmature|Jump
+    7400006: PenguinArmature|Swim
+    7400008: PenguinArmature|Walk
     9500000: //RootNode
-    10800000: Point.001
-    10800002: Sun
     13700000: ArmL
     13700002: ArmR
     13700004: PenguinBody
@@ -140,119 +135,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: PenguinArmature|Idle1
-      takeName: PenguinArmature|Idle1
-      firstFrame: 0
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PenguinArmature|Jump
-      takeName: PenguinArmature|Jump
-      firstFrame: 0
-      lastFrame: 25
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PenguinArmature|Swim
-      takeName: PenguinArmature|Swim
-      firstFrame: 0
-      lastFrame: 31
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: PenguinArmature|Walk
-      takeName: PenguinArmature|Walk
-      firstFrame: 0
-      lastFrame: 38
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

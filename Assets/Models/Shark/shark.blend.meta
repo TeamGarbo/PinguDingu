@@ -3,38 +3,48 @@ guid: a597e50872def584b96e48e18d809dc8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: SharkBack
-    100004: SharkBody
-    100006: SharkFin
-    100008: SharkTail
-    400000: //RootNode
-    400002: SharkBack
-    400004: SharkBody
-    400006: SharkFin
-    400008: SharkTail
+    100000: Armature
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_003
+    100010: Bone_004
+    100012: //RootNode
+    100014: SharkBack
+    100016: SharkBody
+    100018: SharkFin
+    100020: SharkFront
+    100022: SharkTail
+    400000: Armature
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_003
+    400010: Bone_004
+    400012: //RootNode
+    400014: SharkBack
+    400016: SharkBody
+    400018: SharkFin
+    400020: SharkFront
+    400022: SharkTail
     2100000: SharkFront
-    2100002: SharkTail
-    2100004: SharkFin
+    2100002: SharkFin
+    2100004: SharkTail
     2100006: SharkBack
     2100008: SharkBody
-    2300000: //RootNode
-    2300002: SharkBack
-    2300004: SharkBody
-    2300006: SharkFin
-    2300008: SharkTail
-    3300000: //RootNode
-    3300002: SharkBack
-    3300004: SharkBody
-    3300006: SharkFin
-    3300008: SharkTail
     4300000: SharkFront
-    4300002: SharkTail
-    4300004: SharkFin
+    4300002: SharkFin
+    4300004: SharkTail
     4300006: SharkBack
     4300008: SharkBody
     7400000: Default Take
+    7400002: Swim
     9500000: //RootNode
+    13700000: SharkBack
+    13700002: SharkBody
+    13700004: SharkFin
+    13700006: SharkFront
+    13700008: SharkTail
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

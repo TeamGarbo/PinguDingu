@@ -48,13 +48,20 @@ public class EnemyController : MonoBehaviour
             }
 
             if (chasing) {
-                transform.LookAt(player);
+                transform.LookAt(player, Vector3.forward);
                 transform.Translate(Vector3.forward * moveSpeed);
             }
 
             if (!chasing) {
-                transform.LookAt(patrolPoints[patrolIndex]);
-                transform.Translate(Vector3.forward * moveSpeed / 2);
+                transform.LookAt(patrolPoints[patrolIndex], Vector3.up);
+               
+
+                if (Vector3.Distance(transform.position, patrolPoints[patrolIndex]) < killDistance)
+                    if (patrolIndex < patrolPoints.Length - 1) {
+                        patrolIndex++;
+                    } else {
+                        patrolIndex = 0;
+                    }
             }
         }
     }
