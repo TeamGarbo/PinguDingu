@@ -1,24 +1,14 @@
 fileFormatVersion: 2
-guid: 14e2c99456ec2c4418eb2b77deaf47c8
+guid: ffce2a23db284834c949fa09e1951082
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Handle
-    100004: HandleConnector
     400000: //RootNode
-    400002: Handle
-    400004: HandleConnector
-    2100000: unnamed
+    2100000: Stove
     2300000: //RootNode
-    2300002: Handle
-    2300004: HandleConnector
     3300000: //RootNode
-    3300002: Handle
-    3300004: HandleConnector
-    4300000: IglooDoorL
-    4300002: Handle
-    4300004: HandleConnector
+    4300000: Fireplace
     7400000: Default Take
     9500000: //RootNode
   externalObjects: {}

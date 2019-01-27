@@ -1,89 +1,118 @@
 fileFormatVersion: 2
-guid: 17f45a18fc18f0f4196704ab95b14949
+guid: 401973ba3b77e7b46a6e721cb5e67379
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: ArmL
     100002: ArmLeftLower
-    100004: ArmLeftUpper
-    100006: ArmR
-    100008: ArmRightLower
-    100010: ArmRightUpper
-    100012: Beak_Lower
-    100014: Beak_Upper
-    100016: CollarLeft
-    100018: CollarRight
-    100020: EyeL
-    100022: EyeR
-    100024: FootL
-    100026: FootLeft
-    100028: FootR
-    100030: FootRight
-    100032: Head
-    100034: HipLeft
-    100036: HipRight
-    100038: LegLeft
-    100040: LegRight
-    100042: PenguinArmature
-    100044: PenguinBody
-    100046: //RootNode
-    100048: ShoulderLeft
-    100050: ShoulderRight
-    100052: TorsoLower
-    100054: TorsoUpper
+    100004: ArmLeftLower_end
+    100006: ArmLeftUpper
+    100008: ArmR
+    100010: ArmRightLower
+    100012: ArmRightLower_end
+    100014: ArmRightUpper
+    100016: Beak Lower
+    100018: Beak Upper
+    100020: CollarLeft
+    100022: CollarRight
+    100024: EyeL
+    100026: EyeR
+    100028: FootL
+    100030: FootLeft
+    100032: FootLeft_end
+    100034: FootR
+    100036: FootRight
+    100038: FootRight_end
+    100040: Head
+    100042: Head_end
+    100044: HipLeft
+    100046: HipRight
+    100048: LegLeft
+    100050: LegRight
+    100052: PenguinArmature
+    100054: PenguinBody
+    100056: //RootNode
+    100058: Point.001
+    100060: ShoulderLeft
+    100062: ShoulderRight
+    100064: Sun
+    100066: TorsoLower
+    100068: TorsoUpper
     400000: ArmL
     400002: ArmLeftLower
-    400004: ArmLeftUpper
-    400006: ArmR
-    400008: ArmRightLower
-    400010: ArmRightUpper
-    400012: Beak_Lower
-    400014: Beak_Upper
-    400016: CollarLeft
-    400018: CollarRight
-    400020: EyeL
-    400022: EyeR
-    400024: FootL
-    400026: FootLeft
-    400028: FootR
-    400030: FootRight
-    400032: Head
-    400034: HipLeft
-    400036: HipRight
-    400038: LegLeft
-    400040: LegRight
-    400042: PenguinArmature
-    400044: PenguinBody
-    400046: //RootNode
-    400048: ShoulderLeft
-    400050: ShoulderRight
-    400052: TorsoLower
-    400054: TorsoUpper
-    2100000: unnamed
-    4300000: FootR
-    4300002: ArmR
-    4300004: PenguinBody
-    4300006: Beak_Lower
-    4300008: Beak_Upper
-    4300010: EyeL
-    4300012: EyeR
-    4300014: ArmL
-    4300016: FootL
-    7400000: Default Take
-    7400002: Idle1
-    7400004: Jump
-    7400006: Swim
-    7400008: Walk
+    400004: ArmLeftLower_end
+    400006: ArmLeftUpper
+    400008: ArmR
+    400010: ArmRightLower
+    400012: ArmRightLower_end
+    400014: ArmRightUpper
+    400016: Beak Lower
+    400018: Beak Upper
+    400020: CollarLeft
+    400022: CollarRight
+    400024: EyeL
+    400026: EyeR
+    400028: FootL
+    400030: FootLeft
+    400032: FootLeft_end
+    400034: FootR
+    400036: FootRight
+    400038: FootRight_end
+    400040: Head
+    400042: Head_end
+    400044: HipLeft
+    400046: HipRight
+    400048: LegLeft
+    400050: LegRight
+    400052: PenguinArmature
+    400054: PenguinBody
+    400056: //RootNode
+    400058: Point.001
+    400060: ShoulderLeft
+    400062: ShoulderRight
+    400064: Sun
+    400066: TorsoLower
+    400068: TorsoUpper
+    2100000: Beak Lower
+    2100002: Beak Upper
+    2100004: Lefteye
+    2100006: Righteye
+    2100008: LeftFoot
+    2100010: RightFoot
+    2100012: RightArm
+    2100014: PinguBody
+    2100016: LeftArm
+    2300000: Beak Lower
+    2300002: Beak Upper
+    2300004: EyeL
+    2300006: EyeR
+    2300008: FootL
+    2300010: FootR
+    3300000: Beak Lower
+    3300002: Beak Upper
+    3300004: EyeL
+    3300006: EyeR
+    3300008: FootL
+    3300010: FootR
+    4300000: Beak Lower
+    4300002: Beak Upper
+    4300004: EyeL
+    4300006: EyeR
+    4300008: FootL
+    4300010: FootR
+    4300012: ArmR
+    4300014: PenguinBody
+    4300016: ArmL
+    7400000: PenguinArmature|Idle1
+    7400002: PenguinArmature|Jump
+    7400004: PenguinArmature|Swim
+    7400006: PenguinArmature|Walk
     9500000: //RootNode
+    10800000: Point.001
+    10800002: Sun
     13700000: ArmL
     13700002: ArmR
-    13700004: Beak_Lower
-    13700006: Beak_Upper
-    13700008: EyeL
-    13700010: EyeR
-    13700012: FootL
-    13700014: FootR
-    13700016: PenguinBody
+    13700004: PenguinBody
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -113,8 +142,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Default Take
-      takeName: Default Take
+      name: PenguinArmature|Idle1
+      takeName: PenguinArmature|Idle1
       firstFrame: 0
       lastFrame: 49
       wrapMode: 0
@@ -141,36 +170,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Idle1
-      takeName: Idle1
-      firstFrame: 0
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Jump
-      takeName: Jump
+      name: PenguinArmature|Jump
+      takeName: PenguinArmature|Jump
       firstFrame: 0
       lastFrame: 25
       wrapMode: 0
@@ -197,8 +198,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Swim
-      takeName: Swim
+      name: PenguinArmature|Swim
+      takeName: PenguinArmature|Swim
       firstFrame: 0
       lastFrame: 31
       wrapMode: 0
@@ -225,8 +226,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Walk
-      takeName: Walk
+      name: PenguinArmature|Walk
+      takeName: PenguinArmature|Walk
       firstFrame: 0
       lastFrame: 38
       wrapMode: 0
@@ -276,7 +277,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60

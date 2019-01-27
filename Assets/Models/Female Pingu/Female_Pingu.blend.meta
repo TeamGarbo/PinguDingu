@@ -1,0 +1,186 @@
+fileFormatVersion: 2
+guid: 9f2028385c6831d4fafcbab3dc844b45
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ArmL
+    100002: ArmLeftLower
+    100004: ArmLeftUpper
+    100006: ArmR
+    100008: ArmRightLower
+    100010: ArmRightUpper
+    100012: Beak_Lower
+    100014: Beak_Upper
+    100016: Bow
+    100018: CollarLeft
+    100020: CollarRight
+    100022: EyeL
+    100024: EyeR
+    100026: //RootNode
+    100028: FootL
+    100030: FootLeft
+    100032: FootR
+    100034: FootRight
+    100036: Head
+    100038: HipLeft
+    100040: HipRight
+    100042: LegLeft
+    100044: LegRight
+    100046: PenguinArmature
+    100048: PenguinBody
+    100050: ShoulderLeft
+    100052: ShoulderRight
+    100054: TorsoLower
+    100056: TorsoUpper
+    400000: ArmL
+    400002: ArmLeftLower
+    400004: ArmLeftUpper
+    400006: ArmR
+    400008: ArmRightLower
+    400010: ArmRightUpper
+    400012: Beak_Lower
+    400014: Beak_Upper
+    400016: Bow
+    400018: CollarLeft
+    400020: CollarRight
+    400022: EyeL
+    400024: EyeR
+    400026: //RootNode
+    400028: FootL
+    400030: FootLeft
+    400032: FootR
+    400034: FootRight
+    400036: Head
+    400038: HipLeft
+    400040: HipRight
+    400042: LegLeft
+    400044: LegRight
+    400046: PenguinArmature
+    400048: PenguinBody
+    400050: ShoulderLeft
+    400052: ShoulderRight
+    400054: TorsoLower
+    400056: TorsoUpper
+    2100000: RightFoot
+    2100002: RightArm
+    2100004: Body
+    2100006: Beak_Lower
+    2100008: Beak_Upper
+    2100010: LeftEye
+    2100012: RightEye
+    2100014: LeftArm__LeftArm
+    2100016: LeftFoot
+    2100018: Bow
+    4300000: FootR
+    4300002: ArmR
+    4300004: PenguinBody
+    4300006: Beak_Lower
+    4300008: Beak_Upper
+    4300010: EyeL
+    4300012: EyeR
+    4300014: ArmL
+    4300016: FootL
+    4300018: Bow
+    7400000: Default Take
+    7400002: Idle1
+    7400004: Jump
+    7400006: Swim
+    7400008: Walk
+    9500000: //RootNode
+    13700000: ArmL
+    13700002: ArmR
+    13700004: Beak_Lower
+    13700006: Beak_Upper
+    13700008: Bow
+    13700010: EyeL
+    13700012: EyeR
+    13700014: FootL
+    13700016: FootR
+    13700018: PenguinBody
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
