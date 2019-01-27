@@ -4,11 +4,36 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: SharkBack
+    100004: SharkBody
+    100006: SharkFin
+    100008: SharkTail
     400000: //RootNode
-    2100000: Shark
+    400002: SharkBack
+    400004: SharkBody
+    400006: SharkFin
+    400008: SharkTail
+    2100000: SharkFront
+    2100002: SharkTail
+    2100004: SharkFin
+    2100006: SharkBack
+    2100008: SharkBody
     2300000: //RootNode
+    2300002: SharkBack
+    2300004: SharkBody
+    2300006: SharkFin
+    2300008: SharkTail
     3300000: //RootNode
-    4300000: Shark
+    3300002: SharkBack
+    3300004: SharkBody
+    3300006: SharkFin
+    3300008: SharkTail
+    4300000: SharkFront
+    4300002: SharkTail
+    4300004: SharkFin
+    4300006: SharkBack
+    4300008: SharkBody
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
