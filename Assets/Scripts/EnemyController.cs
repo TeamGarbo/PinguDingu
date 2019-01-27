@@ -13,10 +13,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField]  private float seekDistance = 7.5f;
     [SerializeField]  private float chaseDistance = 10f;
     [SerializeField]  private float killDistance = 1.2f;
+    [SerializeField] private Vector3[] patrolPoints;
+    private int patrolIndex;
 
     private volatile bool takingABreak = false;
     private int MAX_DELAY = 2000;
-
     private int stopTheBreak = 0;
 
     void Start() {
@@ -49,6 +50,11 @@ public class EnemyController : MonoBehaviour
             if (chasing) {
                 transform.LookAt(player);
                 transform.Translate(Vector3.forward * moveSpeed);
+            }
+
+            if (!chasing) {
+                transform.LookAt(patrolPoints[patrolIndex]);
+                transform.Translate(Vector3.forward * moveSpeed / 2);
             }
         }
     }

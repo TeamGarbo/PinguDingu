@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.22774878, g: 0.5215551, b: 0.84771067, a: 1}
+  m_IndirectSpecularColor: {r: 0.2278327, g: 0.5215709, b: 0.8477099, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1603,9 +1603,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
-  seekDistance: 7.5
-  chaseDistance: 10
-  killDistance: 1.2
+  seekDistance: 15
+  chaseDistance: 20
+  killDistance: 3
+  patrolPoints:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &1026300085
 GameObject:
   m_ObjectHideFlags: 0
@@ -2766,6 +2770,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9f75cd97e5d4d34b91b104e414c3a2e, type: 3}
+--- !u!1 &4345701545754221208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 419946704740084009, guid: a9f75cd97e5d4d34b91b104e414c3a2e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4345701545754221207}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4345701545754221209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345701545754221208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b9b3f0b5a41ed942af8bebe461a45e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6229303048037951894
 PrefabInstance:
   m_ObjectHideFlags: 0
