@@ -9,6 +9,8 @@ public class ItemController : MonoBehaviour {
     [SerializeField] private Vector3 carryPosition;
     [SerializeField] private Vector3 carryRotation;
     private Vector3 originalRotation;
+    [SerializeField] private Vector3 dropPosition;
+    [SerializeField] private Vector3 dropRotation;
 
     public void DoTheThing() {
         transform.SetParent(GameController.GetPlayer().transform.GetChild(1));
@@ -26,9 +28,29 @@ public class ItemController : MonoBehaviour {
         transform.localPosition = new Vector3(0.827f, 0.09f, 0.125f);
     }
 
-    public void Drop() {
+    private void setPositionToPlayer(){
         transform.SetParent(GameController.GetIgloo().transform);
         transform.eulerAngles = originalRotation;
         transform.position = new Vector3(transform.position.x, GameController.GetPlayer().transform.position.y+0.5f, transform.position.z);
+    }
+
+    public void Drop(bool insideIgloo) {
+        if (dropPosition.x == 0 && dropPosition.y == 0 && dropPosition.z == 0) {
+            setPositionToPlayer();
+        } else {
+            if (insideIgloo){
+                Debug.Log(dropPosition);
+
+                transform.SetParent(GameController.GetIgloo().transform);
+                transform.eulerAngles = originalRotation;
+                // transform.position = new Vector3(transform.position.x, GameController.GetPlayer().transform.position.y+0.5f, transform.position.z);
+                transform.localPosition = dropPosition;
+                transform.localRotation = Quaternion.Euler(dropRotation.x, dropRotation.y, dropRotation.z);
+            } else {
+                setPositionToPlayer();
+            }
+        }
+
+        
     }
 }
