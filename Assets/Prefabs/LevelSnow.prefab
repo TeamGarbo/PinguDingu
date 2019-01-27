@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7281700263286618660}
   - component: {fileID: 7281700263286618667}
   - component: {fileID: 7281700263286618666}
+  - component: {fileID: 724144451}
   m_Layer: 0
   m_Name: LevelSnow
   m_TagString: Untagged
@@ -4698,3 +4699,15 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &724144451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7281700263286618665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24eea333220eb9849a5d17403a5ff02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
