@@ -27,6 +27,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carryPosition: {x: 0, y: 2.855, z: -0.533}
   carryRotation: {x: 55, y: 270, z: 90}
+  dropPosition: {x: 0, y: 0, z: 0}
+  dropRotation: {x: 0, y: 0, z: 0}
+  carryScale: {x: 2, y: 2, z: 2}
+  originalScale: {x: 1, y: 1, z: 1}
 --- !u!1001 &3907390046478702977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -85,18 +89,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: caf5a495b81a4a6418e283c40186a82d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: caf5a495b81a4a6418e283c40186a82d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: caf5a495b81a4a6418e283c40186a82d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: caf5a495b81a4a6418e283c40186a82d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: caf5a495b81a4a6418e283c40186a82d, type: 3}
